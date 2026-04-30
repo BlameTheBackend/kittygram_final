@@ -140,6 +140,10 @@ jobs:
           echo "DB_HOST=${{ secrets.DB_HOST }}" >> .env
           echo "DB_PORT=${{ secrets.DB_PORT }}" >> .env
           echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
+      - name: Debug location
+        run: |
+          pwd
+          ls -la
       - name: Copy files via ssh
         uses: appleboy/scp-action@master
         with:
