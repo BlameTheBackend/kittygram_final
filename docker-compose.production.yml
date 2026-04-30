@@ -8,9 +8,9 @@ volumes:
 services:
   db:
     image: postgres:13
-  env_file: .env
-  volumes:
-    pg_data:/var/lib/postgresql/data
+    env_file: .env
+    volumes:
+      pg_data:/var/lib/postgresql/data
 
   backend:
     image: alexzzzz05/kittygram_backend
