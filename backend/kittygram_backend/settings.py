@@ -11,11 +11,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'unsafe-secret-key-for-ci')
 
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-# ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'yandexserver.duckdns.org']
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
-
-print("ALLOWED_HOSTS RAW:", os.getenv('ALLOWED_HOSTS'))
-print("ALLOWED_HOSTS PARSED:", ALLOWED_HOSTS)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
